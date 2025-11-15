@@ -1,39 +1,32 @@
 # Changelog
-
 All notable changes to this project will be documented in this file.
 
-## [0.19.0](https://github.com/ngeor/kamino/compare/plugins/yak4j-filename-conventions-maven-plugin/v0.18.2...plugins/yak4j-filename-conventions-maven-plugin/v0.19.0) - 2024-02-27
-
-### Fixes
-
-* Upgrading libraries to Java 17
+## [0.18.4] - 2025-11-15
 
 ### Miscellaneous Tasks
 
-* Delete old .github and scripts folders
-* Keeping only root .editorconfig, deleting the rest
-* Keeping only root .gitignore, deleting the rest
-* Upgrade to latest parent pom
-* Upgraded to latest parent pom
-* Use `com.github.ngeor:java` as the parent pom everywhere
-* Switch to snapshot version of parent pom
-* Removed un-thrown exception
+- Publish to Central Maven
 
-### Dependencies
+## [0.18.3] - 2025-02-06
 
-* Upgraded parent pom
+### Features
 
-## [0.18.2] - 2024-01-28
+- Use tag based release workflow
 
 ### Miscellaneous Tasks
 
-* Add 'plugins/yak4j-filename-conventions-maven-plugin/' from commit 'be20907af0a853bfc0d83a78fc975514c28db294'
-* Adjusted imported code
-* Adjusted imported code
-
-### Dependencies
-
-* Upgrade dependencies
+- Updated copyright year in LICENSE
+- Updating parent from 2.1.0 to 2.4.0
+- Updating parent from 2.4.0 to 3.1.1
+- Update dependency org.apache.maven.plugins:maven-invoker-plugin to v3.2.2
+- Update maven-plugin-plugin.version to v3.6.4
+- Update maven-core.version to v3.8.5
+- Update dependency org.apache.maven.plugins:maven-invoker-plugin to v3.3.0
+- Update maven-core.version to v3.8.6
+- Fix import order
+- Update dependency com.github.ngeor:java to v3.2.0
+- Update dependency com.github.ngeor:java to v3.3.0
+- Moved back to its own repo
 
 ## [0.18.1] - 2022-01-27
 
