@@ -47,7 +47,6 @@
     <maven.compiler.release>${java.version}</maven.compiler.release>
     <palantir.version>2.39.0</palantir.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sortpom-maven-plugin.version>4.0.0</sortpom-maven-plugin.version>
     <spotless-maven-plugin.version>3.4.0</spotless-maven-plugin.version>
   </properties>
   <dependencyManagement>
@@ -118,20 +117,6 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>com.github.ekryd.sortpom</groupId>
-          <artifactId>sortpom-maven-plugin</artifactId>
-          <version>${sortpom-maven-plugin.version}</version>
-          <configuration>
-            <createBackupFile>false</createBackupFile>
-            <expandEmptyElements>false</expandEmptyElements>
-            <keepBlankLines>false</keepBlankLines>
-            <sortProperties>true</sortProperties>
-            <sortDependencies>scope</sortDependencies>
-            <verifyFail>stop</verifyFail>
-            <verifyFailOn>strict</verifyFailOn>
-          </configuration>
-        </plugin>
-        <plugin>
           <groupId>com.diffplug.spotless</groupId>
           <artifactId>spotless-maven-plugin</artifactId>
           <version>${spotless-maven-plugin.version}</version>
@@ -144,6 +129,13 @@
               </palantirJavaFormat>
               <removeUnusedImports/>
             </java>
+            <pom>
+              <sortPom>
+                <expandEmptyElements>false</expandEmptyElements>
+                <sortProperties>true</sortProperties>
+                <sortDependencies>scope</sortDependencies>
+              </sortPom>
+            </pom>
           </configuration>
         </plugin>
         <plugin>
@@ -339,18 +331,6 @@
       <build>
         <plugins>
           <plugin>
-            <groupId>com.github.ekryd.sortpom</groupId>
-            <artifactId>sortpom-maven-plugin</artifactId>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>sort</goal>
-                </goals>
-                <phase>validate</phase>
-              </execution>
-            </executions>
-          </plugin>
-          <plugin>
             <groupId>com.diffplug.spotless</groupId>
             <artifactId>spotless-maven-plugin</artifactId>
             <executions>
@@ -375,18 +355,6 @@
       </activation>
       <build>
         <plugins>
-          <plugin>
-            <groupId>com.github.ekryd.sortpom</groupId>
-            <artifactId>sortpom-maven-plugin</artifactId>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>verify</goal>
-                </goals>
-                <phase>validate</phase>
-              </execution>
-            </executions>
-          </plugin>
           <plugin>
             <groupId>com.diffplug.spotless</groupId>
             <artifactId>spotless-maven-plugin</artifactId>
