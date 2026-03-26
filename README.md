@@ -12,7 +12,7 @@ A Maven plugin which enforces filename conventions.
 <plugin>
   <groupId>com.github.ngeor</groupId>
   <artifactId>yak4j-filename-conventions-maven-plugin</artifactId>
-  <version>0.10.2</version>
+  <version>0.18.5</version>
 </plugin>
 ```
 
